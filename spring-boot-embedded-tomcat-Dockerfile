@@ -6,6 +6,6 @@ EXPOSE 8080
 
 WORKDIR /usr/local/bin/
 
-COPY ./fleetman-0.0.1-SNAPSHOT.jar .
+COPY ./fleetman-0.0.1-SNAPSHOT.jar webapp.jar
 
-CMD ["java", "-jar" ,"-Dspring.profiles.active=docker-demo", "fleetman-0.0.1-SNAPSHOT.jar"]
+CMD ["java", "-jar" ,"-Dspring.profiles.active=docker-demo", "webapp.jar"]

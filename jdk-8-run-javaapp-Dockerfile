@@ -1,0 +1,12 @@
+FROM ubuntu:latest
+
+MAINTAINER Balvinder Banjardar "banjardar@outlook.com"
+
+RUN apt-get update && apt-get install -y openjdk-8-jdk
+
+WORKDIR /usr/local/bin/
+
+ADD test-program.jar .
+
+ENTRYPOINT ["java", "-jar", "test-program.jar"]
+
